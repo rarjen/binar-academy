@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
-function logger(req, res, next) {
-  console.log("Time:", Date.now());
-  next(); // utk melanjutkan ke proses selanjutnya
-}
+// function timeLogger(req, res, next) {
+//   console.log("Time:", Date.now());
+//   next(); // utk melanjutkan ke proses selanjutnya
+// }
 
-router.use(logger);
+// router.use(timeLogger);
 
 // router.get("/", (req, res) => res.send("Hello World"));
 router.get("/products", (req, res) => {
@@ -59,7 +59,7 @@ router.get("/orders/:orderId", (req, res) => {
 
 router.post("/products", (req, res) => {
   const { name } = req.body;
-  res.send(name);
+  res.json(name);
 });
 
 module.exports = router;
