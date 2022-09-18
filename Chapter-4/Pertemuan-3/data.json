@@ -1,0 +1,33 @@
+{
+  "users": [
+    { "id": 1, "name": "kevin", "email": "kevins@gmail.com" },
+    { "id": 2, "name": "leinto", "email": "leinto@mail.com" },
+    { "id": 3, "name": "hacker", "email": "hecker@gmail.com" }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Teh Botol",
+      "description": "teh botol tapi kotak",
+      "price": 3000
+    },
+    {
+      "id": 2,
+      "name": "teh kotak",
+      "description": "teh kotak tetap kotak",
+      "price": 3500
+    },
+    {
+      "id": 3,
+      "name": "beng - beng",
+      "description": "beng - beng coklat",
+      "price": 3000
+    },
+    {
+      "id": 4,
+      "name": "Teh Poci",
+      "description": "teh nya ga di poci tapi di botol",
+      "price": 4000
+    }
+  ]
+}
