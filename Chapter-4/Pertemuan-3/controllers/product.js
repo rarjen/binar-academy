@@ -89,6 +89,13 @@ module.exports = {
 
     let products = data.products;
 
+    // if (foundIndex.length == 0) {
+    //   return res.status(404).json({
+    //     status: "failed",
+    //     message: "not found",
+    //     data: null,
+    //   });
+
     if (foundIndex < 0) {
       return res.status(404).json({
         status: "failed",

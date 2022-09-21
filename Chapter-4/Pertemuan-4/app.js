@@ -11,13 +11,14 @@ async function main() {
   // find all
   const usersAll = await users.findAll();
   usersAll.forEach((data) => {
-    // console.info(`Id: ${data.id}`);
-    // console.info(`First Name: ${data.name}`);
-    // // console.info(`Email: ${data.email}`);
-    // console.info(`Password: ${data.password}`);
-    // console.info("------------------------");
+    console.info(`Id: ${data.id}`);
+    console.info(`First Name: ${data.name}`);
+    // console.info(`Email: ${data.email}`);
+    console.info(`Password: ${data.password}`);
+    console.info("------------------------");
     console.log(data.get());
   });
+  // console.log(usersAll.length);
   //findAll filter
   // const users = await users.findAll({
   //   where: {
@@ -25,12 +26,12 @@ async function main() {
   //   },
   // });
   // mencari head array find by id
-  const userAll2 = await users.findOne({
-    where: {
-      id: 3,
-    },
-  });
-  console.log(userAll2.get());
+  // const userAll2 = await users.findOne({
+  //   where: {
+  //     id: 3,
+  //   },
+  // });
+  // console.log(userAll2.get());
   // update data
   // const updated = await users.update(
   //   {
