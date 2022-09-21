@@ -2,11 +2,11 @@ const { users } = require("./models");
 
 async function main() {
   // create data
-  // const user = await users.create({
-  //   name: "Peter Parker",
-  //   // email: "jena@gmail.com",
-  //   password: "password123",
-  // });
+  const user = await users.create({
+    name: "Peter Parker",
+    // email: "jena@gmail.com",
+    password: "password123",
+  });
   // console.log(user);
   // find all
   const usersAll = await users.findAll();
