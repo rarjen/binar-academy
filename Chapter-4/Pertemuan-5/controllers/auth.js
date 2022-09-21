@@ -86,4 +86,20 @@ module.exports = {
       });
     } catch (error) {}
   },
+  whoami: (req, res, next) => {
+    const user = req.user;
+
+    try {
+      return res.status(200).json({
+        status: false,
+        message: "success",
+        data: user,
+      });
+    } catch (error) {
+      next(error);
+    }
+  },
+  changePassword: async (req, res, next) => {
+    const { oldPass, newPass, confirmNewPass } = req.body;
+  },
 };
