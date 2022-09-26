@@ -13,6 +13,12 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "user_id",
         as: "channel",
       });
+      // realasi many to many users-channels melalui subscritions
+      users.belongsToMany(models.Channels, {
+        through: models.Subscriptions,
+        foreignKey: "user_id",
+        as: "subscriptions",
+      });
     }
   }
   users.init(

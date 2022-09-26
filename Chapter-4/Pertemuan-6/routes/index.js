@@ -10,6 +10,12 @@ router.get("/auth/whoami", mid.mustLogin, c.auth.whoami);
 router.post("/channels", mid.mustLogin, c.channels.create);
 router.get("/channels", mid.mustLogin, c.channels.index);
 router.get("/channels/:channel_id", mid.mustLogin, c.channels.show);
+router.post("/channels/subscribe", mid.mustLogin, c.subscriptions.subscribe);
+router.delete(
+  "/channels/unsubscribe",
+  mid.mustLogin,
+  c.subscriptions.unsubscribe
+);
 
 router.post("/videos", mid.mustLogin, c.videos.create);
 router.get("/videos", mid.mustLogin, c.videos.index);

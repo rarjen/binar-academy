@@ -63,6 +63,13 @@ module.exports = {
             as: "user",
             attributes: ["name", "email"],
           },
+          {
+            model: users,
+            as: "subscribers",
+            attributes: ["name", "email"],
+            through: { attributes: [] }, // jika kita tidak mau memunculkan subscriptionnya
+            // dengan kata lain melakukan exclude through
+          },
         ],
       });
       if (!channels) {

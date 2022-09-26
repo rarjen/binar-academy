@@ -18,6 +18,13 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "channel_id",
         as: "videos",
       });
+
+      // relasi many to many users-channels melalui subscriptions
+      Channels.belongsToMany(models.users, {
+        through: models.Subscriptions,
+        foreignKey: "channel_id",
+        as: "subscribers",
+      });
     }
   }
   Channels.init(

@@ -2,8 +2,8 @@ POST http://localhost:3000/auth/register
 content-type: application/json
 
 {
-    "name":"leinto",
-    "email":"leinto@gmail.com",
+    "name":"valen",
+    "email":"valen@gmail.com",
     "password":"qwerty123"
 }
 
@@ -13,7 +13,7 @@ POST http://localhost:3000/auth/login
 content-type: application/json
 
 {
-    "email":"leinto@gmail.com",
+    "email":"saiyan@gmail.com",
     "password":"qwerty123"
 }
 
@@ -26,12 +26,12 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImxlaW50
 
 POST http://localhost:3000/channels
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImxlaW50byIsImVtYWlsIjoibGVpbnRvQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE2NTg0Nn0.Nv2IQWsc08Ewa2a9BBKnCq9aOWOADTvxO-_eFpVp5L4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6InNhaXlhbiIsImVtYWlsIjoic2FpeWFuQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE3ODAyNX0.-dnruQoFwcJXpWTU0olIat11YtYM_5cOOXS_Jzr0G8E
 
 {
-    "name":"Leinto Channels",
-    "description":"Learn Code with Leinto",
-    "user_id":2
+    "name":"Close The Door",
+    "description":"Somasi",
+    "user_id":4
 }
 
 ### LIST DETAIL CHANNEL
@@ -40,19 +40,19 @@ content-type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImtvaSIsImVtYWlsIjoia29pQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE1NzcwNX0.zrvz-QfHmoEBVWbbJlxsUWHHed14VUcg99B8mnBnekk
 
 ### GET DETAIL CHANNEL
-GET http://localhost:3000/channels/2
+GET http://localhost:3000/channels/3
 content-type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImxlaW50byIsImVtYWlsIjoibGVpbnRvQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE2NTg0Nn0.Nv2IQWsc08Ewa2a9BBKnCq9aOWOADTvxO-_eFpVp5L4
 
 ### CREATE VIDEOS
 POST http://localhost:3000/videos
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImxlaW50byIsImVtYWlsIjoibGVpbnRvQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE2NTg0Nn0.Nv2IQWsc08Ewa2a9BBKnCq9aOWOADTvxO-_eFpVp5L4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6InNhaXlhbiIsImVtYWlsIjoic2FpeWFuQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE3ODAyNX0.-dnruQoFwcJXpWTU0olIat11YtYM_5cOOXS_Jzr0G8E
 
 {
-    "title":"JavaScript Async",
-    "description":"We're gonna learn some JS Async",
-    "channel_id":2
+    "title":"Basics Super Saiyan Part-2",
+    "description":"We're gonna learn some Saiyan Mode Part-2",
+    "channel_id":3
 }
 
 ### LIST DETAIL VIDEOS
@@ -70,3 +70,17 @@ GET http://localhost:3000/videos/show/2
 content-type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImxlaW50byIsImVtYWlsIjoibGVpbnRvQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE2NTg0Nn0.Nv2IQWsc08Ewa2a9BBKnCq9aOWOADTvxO-_eFpVp5L4
 
+### SUBSCRIBE
+POST http://localhost:3000/channels/subscribe
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImxlaW50byIsImVtYWlsIjoibGVpbnRvQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE2NTg0Nn0.Nv2IQWsc08Ewa2a9BBKnCq9aOWOADTvxO-_eFpVp5L4
+
+{
+   "user_id":1,
+   "channel_id":3
+}
+
+### UNSUBSCRIBE
+DELETE http://localhost:3000/channels/unsubscribe
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImxlaW50byIsImVtYWlsIjoibGVpbnRvQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE2NTg0Nn0.Nv2IQWsc08Ewa2a9BBKnCq9aOWOADTvxO-_eFpVp5L4

@@ -25,10 +25,11 @@ module.exports = {
         password: encryptedPassword,
       });
 
-      return res.status(200).json({
+      return res.status(201).json({
         status: false,
         message: "success",
         data: {
+          id: user.id,
           name: user.name,
           email: user.email,
         },
