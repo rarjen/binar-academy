@@ -63,4 +63,26 @@ module.exports = {
       next(error);
     }
   },
+  showByChannel: async (req, res, next) => {
+    try {
+      //   const user = req.user;
+      const { channel_id } = req.params;
+      const videos = await Videos.findAll({
+        where: { channel_id: channel_id },
+      });
+      if (!videos) {
+        return res.status(404).json({
+          status: false,
+          data: null,
+        });
+      }
+
+      return res.status(200).json({
+        status: true,
+        data: videos,
+      });
+    } catch (error) {
+      next(error);
+    }
+  },
 };

@@ -14,5 +14,6 @@ router.get("/channels/:channel_id", mid.mustLogin, c.channels.show);
 router.post("/videos", mid.mustLogin, c.videos.create);
 router.get("/videos", mid.mustLogin, c.videos.index);
 router.get("/videos/:video_id", mid.mustLogin, c.videos.show);
+router.get("/videos/show/:channel_id", mid.mustLogin, c.videos.showByChannel);
 
 module.exports = router;
