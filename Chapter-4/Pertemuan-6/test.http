@@ -1,0 +1,82 @@
+POST http://localhost:3000/auth/register
+content-type: application/json
+
+{
+    "name":"koi",
+    "email":"koi@gmail.com",
+    "password":"qwerty123"
+}
+
+###
+
+POST http://localhost:3000/auth/login
+content-type: application/json
+
+{
+    "email":"koi@gmail.com",
+    "password":"qwerty123"
+}
+
+###
+GET http://localhost:3000/auth/whoami
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImtvaSIsImVtYWlsIjoia29pQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE1NzcwNX0.zrvz-QfHmoEBVWbbJlxsUWHHed14VUcg99B8mnBnekk
+
+{
+    "email":"koi@gmail.com",
+    "password":"qwerty123"
+}
+
+
+###
+
+POST http://localhost:3000/channels
+content-type: application/json
+{
+    "name":"sepulang sekolah",
+    "description":"learning by googling",
+    "user_id":1
+}
+
+### CREATE CHANNEL
+
+POST http://localhost:3000/channels
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImtvaSIsImVtYWlsIjoia29pQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE1NzcwNX0.zrvz-QfHmoEBVWbbJlxsUWHHed14VUcg99B8mnBnekk
+
+{
+    "name":"sepulang sekolah",
+    "description":"learning by googling",
+    "user_id":1
+}
+
+### LIST DETAIL
+GET http://localhost:3000/channels
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImtvaSIsImVtYWlsIjoia29pQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE1NzcwNX0.zrvz-QfHmoEBVWbbJlxsUWHHed14VUcg99B8mnBnekk
+
+### GET DETAIL
+GET http://localhost:3000/channels/1
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImtvaSIsImVtYWlsIjoia29pQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE1NzcwNX0.zrvz-QfHmoEBVWbbJlxsUWHHed14VUcg99B8mnBnekk
+
+### CREATE VIDEOS
+POST http://localhost:3000/videos
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImtvaSIsImVtYWlsIjoia29pQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE1NzcwNX0.zrvz-QfHmoEBVWbbJlxsUWHHed14VUcg99B8mnBnekk
+
+{
+    "title":"NodeJS: ExpressJS",
+    "description":"Framework paling terkenal dari NodeJS",
+    "channel_id":1
+}
+
+### LIST DETAIL VIDEOS
+GET http://localhost:3000/videos
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImtvaSIsImVtYWlsIjoia29pQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE1NzcwNX0.zrvz-QfHmoEBVWbbJlxsUWHHed14VUcg99B8mnBnekk
+
+### GET DETAIL VIDEOS
+GET http://localhost:3000/videos/2
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImtvaSIsImVtYWlsIjoia29pQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE1NzcwNX0.zrvz-QfHmoEBVWbbJlxsUWHHed14VUcg99B8mnBnekk

@@ -85,7 +85,9 @@ module.exports = {
           token: token,
         },
       });
-    } catch (error) {}
+    } catch (error) {
+      next(error);
+    }
   },
   whoami: (req, res, next) => {
     const user = req.user;
