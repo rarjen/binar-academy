@@ -1,4 +1,5 @@
-const { users, Channels } = require("../models");
+const { users, Channels, Videos } = require("../models");
+const videos = require("./videos");
 
 module.exports = {
   create: async (req, res, next) => {
@@ -45,7 +46,25 @@ module.exports = {
   show: async (req, res, next) => {
     try {
       const { channel_id } = req.params;
-      const channels = await Channels.findOne({ where: { id: channel_id } });
+      const channels = await Channels.findOne({
+        // menampilkan channel dengan video yang dibuat
+        // menampilkan channel yang dimiliki oleh user n
+        // menampilkan channel punya video apa saja dan dimiliki oleh user siapa
+        where: { id: channel_id },
+        // include: ["videos", "user"],
+        include: [
+          {
+            model: Videos,
+            as: "videos",
+            attributes: ["title", "description"],
+          },
+          {
+            model: users,
+            as: "user",
+            attributes: ["name", "email"],
+          },
+        ],
+      });
       if (!channels) {
         return res.status(404).json({
           status: false,

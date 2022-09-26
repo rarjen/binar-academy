@@ -46,7 +46,17 @@ module.exports = {
   show: async (req, res, next) => {
     try {
       const { video_id } = req.params;
-      const videos = await Videos.findOne({ where: { id: video_id } });
+      const videos = await Videos.findOne({
+        // menampilkan video dan detail cahnnel
+        where: { id: video_id },
+        include: [
+          {
+            model: Channels, // database Channels
+            as: "channel", // memanggil alias
+            attributes: ["name", "description"], // pilih attribute yang akan ditampilkan
+          },
+        ],
+      });
       if (!videos) {
         return res.status(404).json({
           status: false,

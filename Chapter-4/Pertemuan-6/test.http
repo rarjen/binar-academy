@@ -42,7 +42,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImtvaSIs
 ### GET DETAIL CHANNEL
 GET http://localhost:3000/channels/2
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImtvaSIsImVtYWlsIjoia29pQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE1NzcwNX0.zrvz-QfHmoEBVWbbJlxsUWHHed14VUcg99B8mnBnekk
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImxlaW50byIsImVtYWlsIjoibGVpbnRvQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE2NTg0Nn0.Nv2IQWsc08Ewa2a9BBKnCq9aOWOADTvxO-_eFpVp5L4
 
 ### CREATE VIDEOS
 POST http://localhost:3000/videos
@@ -58,10 +58,10 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImxlaW50
 ### LIST DETAIL VIDEOS
 GET http://localhost:3000/videos
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImtvaSIsImVtYWlsIjoia29pQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE1NzcwNX0.zrvz-QfHmoEBVWbbJlxsUWHHed14VUcg99B8mnBnekk
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImxlaW50byIsImVtYWlsIjoibGVpbnRvQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE2NTg0Nn0.Nv2IQWsc08Ewa2a9BBKnCq9aOWOADTvxO-_eFpVp5L4
 
 ### GET DETAIL VIDEOS
-GET http://localhost:3000/videos/2
+GET http://localhost:3000/videos/3
 content-type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImtvaSIsImVtYWlsIjoia29pQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE1NzcwNX0.zrvz-QfHmoEBVWbbJlxsUWHHed14VUcg99B8mnBnekk
 
@@ -69,3 +69,4 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImtvaSIs
 GET http://localhost:3000/videos/show/2
 content-type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6ImxlaW50byIsImVtYWlsIjoibGVpbnRvQGdtYWlsLmNvbSIsImlhdCI6MTY2NDE2NTg0Nn0.Nv2IQWsc08Ewa2a9BBKnCq9aOWOADTvxO-_eFpVp5L4
+
