@@ -1,0 +1,41 @@
+POST http://localhost:3001/create
+Content-Type: application/json
+
+{
+    "name":"ruby",
+    "email":"ruby@gmail.com",
+    "password":"qwerty123"
+}
+
+###
+POST http://localhost:3001/find
+Content-Type: application/json
+
+{
+    "email":"ruby@gmail.com"
+}
+
+###
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "name":"pascal",
+    "email":"pascal@gmail.com",
+    "password":"qwerty123"
+}
+
+###
+POST http://localhost:3001/find
+Content-Type: application/json
+
+{
+    "email":"pascal@gmail.com"
+}
+
+
+
+
+
+
+
