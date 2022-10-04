@@ -1,0 +1,36 @@
+{
+  "item": [
+    {
+      "id": "1154d641-6451-451b-81ac-7b7198a63bbe",
+      "name": "Contoh Request Postman",
+      "request": {
+        "url": {
+          "protocol": "https",
+          "path": ["post"],
+          "host": ["httpbin", "org"],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          { "key": "Authorization", "value": "" },
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "cache-control", "value": "no-cache" }
+        ],
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"key1\":\"value1\",\"key2\":\"value2\",\"key3\":\"value3\"}"
+        }
+      },
+      "response": [],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [],
+  "info": {
+    "_postman_id": "947230ec-c11d-4c26-afaa-21ea4c8624ab",
+    "name": "Membuat Dokumentasi",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  }
+}
