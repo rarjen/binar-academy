@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List Product</title>
+  </head>
+  <body>
+    <h2>Daftar Product :</h2>
+    <% products.forEach((product) => {%>
+    <div>
+      <p>------------------------------</p>
+      <b
+        >Nama :
+        <a href="/products/<%= product.id %>"><%= product.name %></a>
+      </b>
+      <p>Harga : <%= product.price %></p>
+    </div>
+    <%})%>
+
+    <p>------------------------------</p>
+    <a href="/products/create">Tambahkan Product</a>
+  </body>
+</html>
