@@ -1,0 +1,26 @@
+{
+  "name": "challenge",
+  "version": "1.0.0",
+  "description": "Challenge Chapter 3",
+  "exports": {
+    ".": "./index.js",
+    "./db": "./db.js"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "Challenge",
+    "NodeJS",
+    "Database"
+  ],
+  "author": "Otniel Kevin Abiel",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.8.0"
+  },
+  "type": "module",
+  "devDependencies": {
+    "jest": "^29.0.2"
+  }
+}
