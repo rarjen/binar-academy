@@ -1,0 +1,11 @@
+Big Compute
+high availability
+
+konfigurasi bc ketiga database akan dipisah-pisah masuknya, dengan 3 komputer ini menjalankan 1 query yg sama
+datanya dibagi ada yg masuk ke 1, 2 dan 3
+
+konfigurasi ha adalah database yg identik, jadi semua databs di masing" komputer sama
+
+ERD adl rancangan dan desain awal Database
+
+https://erdplus.com/documents

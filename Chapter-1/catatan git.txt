@@ -1,0 +1,7 @@
+git checkout -b feature/namafitur
+
+rm -rf git
+
+
+// sinkronisasi file
+git fetch origin 

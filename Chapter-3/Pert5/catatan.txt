@@ -1,0 +1,18 @@
+import database
+
+
+menghitung jumlah video data :
+select count(*) from videos; // 9
+
+menghitung jumlah video masing-masing channnel
+select * from videos
+group by videos.channels_id;
+
+select channel_id, count(*) from videos
+group by videos.channel_id; // count 3 3 3
+
+select channel_id, sum(channel_id) from videos
+group by videos.channel_id; // count 3 6 9
+
+select channel_id, sum(channel_id) from videos
+group by videos.channel_id; // count 3 6 9
