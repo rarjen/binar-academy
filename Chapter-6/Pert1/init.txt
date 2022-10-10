@@ -1,0 +1,5 @@
+init express:
+npx express-generator --no-view chapter6-ttd
+
+init jest
+./node_modules/jest/bin/jest.js --init
