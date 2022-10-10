@@ -1,0 +1,33 @@
+import { getAllProducts, getProductById } from "../src/database.js";
+import { ProductService } from "../src/product-service.js";
+
+jest.mock("../src/database.js"); // melakukan mock terhadap module database
+
+test("mock modules getProductById", () => {
+  // mock
+  getProductById.mockImplementation((id) => {
+    return {
+      id: id,
+      name: "Product Mock",
+    };
+  });
+
+  const product = ProductService.findById(1);
+
+  expect(product).toEqual({
+    id: 1,
+    name: "Product Mock",
+  });
+});
+
+test("mock modules getAllProducts", () => {
+  const products = [
+    { id: 1, name: "Product Mock 1" },
+    { id: 2, name: "Product Mock 2" },
+  ];
+  getAllProducts.mockImplementation(() => {
+    return products;
+  });
+
+  expect(ProductService.findAll()).toEqual(products);
+});
