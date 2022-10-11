@@ -18,7 +18,7 @@ describe("test routing", () => {
           });
         });
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
     }
   });
 });
@@ -29,7 +29,10 @@ describe("base.sum (x, y) function", () => {
       const x = 20;
       const y = 20;
       const result = x + y;
-      const res = await request(app).post("/sum").send({ x, y });
+      const req = await request(app).post("/api/sum").send({ x, y });
+      expct(res.body).toHaveProperty("status");
+      expct(res.body).toHaveProperty("message");
+      expct(res.body).toHaveProperty("data");
       expect(res.body).toEqual({
         status: true,
         message: "Params Summarized!",
@@ -40,7 +43,7 @@ describe("base.sum (x, y) function", () => {
         },
       });
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
     }
   });
 });
