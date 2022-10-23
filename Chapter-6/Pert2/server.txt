@@ -1,0 +1,29 @@
+- Buat Server di : 
+- Install NodeJS di Ubuntu
+- Install NGINX di Ubuntu
+- Masuk ke dalam /var/ (cd /var/)
+- Membuat folder www (mkdir www)
+- Masuk kedalam folder www (cd www/)                    -> path: /var/www#
+- Membuat folder project (ex: mkdir html.kevin.dev)
+- Masuk kedalam folder project (cd html.kevin.dev)      -> path: /var/www/html.kevin.dev#
+- Membuat file html (ex: touch index.html)
+- Edit/menuliskan html dengan perintah (ex: index.html)
+- Keluar dengan cara Esc -> :wq -> Enter 
+- Masuk ke folder /etc/nginx/sites-available            -> path: /etc/nginx/sites-available#
+- Buat folder file yang sama di dlm /var/www# (ex: touch html.kevin.dev)
+- Edit/menuliskan script configuration contoh :
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /var/www/kevin.flolesstudio.com/html;
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name kevin.flolesstudio.com;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
+- Link antara service-available dan service-enable
+- Mengubah Bucket Size menjadi 64

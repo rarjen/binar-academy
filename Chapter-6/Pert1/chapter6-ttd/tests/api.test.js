@@ -29,10 +29,10 @@ describe("base.sum (x, y) function", () => {
       const x = 20;
       const y = 20;
       const result = x + y;
-      const req = await request(app).post("/api/sum").send({ x, y });
-      expct(res.body).toHaveProperty("status");
-      expct(res.body).toHaveProperty("message");
-      expct(res.body).toHaveProperty("data");
+      const res = await request(app).post("/api/sum").send({ x, y });
+      expect(res.body).toHaveProperty("status");
+      expect(res.body).toHaveProperty("message");
+      expect(res.body).toHaveProperty("data");
       expect(res.body).toEqual({
         status: true,
         message: "Params Summarized!",

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1665446389918" clover="3.2.0">
-  <project timestamp="1665446389918" name="All files">
+<coverage generated="1666239277422" clover="3.2.0">
+  <project timestamp="1666239277422" name="All files">
     <metrics statements="51" coveredstatements="51" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2" elements="55" coveredelements="55" complexity="0" loc="51" ncloc="51" packages="3" files="3" classes="3"/>
     <package name="chapter6-ttd">
       <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
